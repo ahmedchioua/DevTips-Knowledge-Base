@@ -2,7 +2,8 @@ doctype html
 html
 	head
 		title Knowledge Base
-		link(rel='stylesheet',href='/bower_components/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet' href='/css/style.css')
 	body
 		nav.navbar.navbar-inverse
 			.container
@@ -21,6 +22,7 @@ html
 							a(href='/articles/add') Add Article
 
 		.container
+			!= messages('message',locals)
 			block content
 			br
 			hr
@@ -28,3 +30,4 @@ html
 				p Copyright &copy; 2017 
 	script(src='/bower_components/jquery/dist/jquery.js')
 	script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+	script(src='/js/main.js')
